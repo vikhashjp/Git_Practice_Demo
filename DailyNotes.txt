@@ -1,0 +1,830 @@
+Fullstack:
+
+	Language: communication with human
+	Programming Language: Communication with machine
+
+james gosling :Sun micro system-->Oracle 
+
+Platform Independent
+Garbage collection
+
+		
+Java Program:
+
+		JDK-->JRE-->JVM
+
+		java -version
+
+	Welcome.java
+		
+
+javac filename.java
+
+java classname
+
+		
+						Java
+		JSE				JEE					JME
+	corejava,awt,swings,applets,jdbc	servlets,jsp,spring,spring boot     Android
+
+1)desktop/standalone apps	calculator,notepad++,eclipse,vlc media 									player,antivirus
+2)web applications			gmail,fb,insta,youtube....	
+
+3)Mobile applications		
+
+4)Distributed applications		phonepe
+
+
+
+Corejava:
+=========
+
+identifiers:
+===========
+		a-z
+		A-Z
+		0-9
+		_
+		$
+
+class 23Welcome
+{
+
+
+}
+
+variables:
+===========
+	local 
+	global -->instance and static
+	variable is a place holder/container/name of memory location
+
+	syntax:
+		datatype varname=value;	
+
+datatype
+========
+	 int	eid		123	
+	String	ename		suresh
+	float	esal		23580.34
+	String	address		hyderabad
+	String	email		suresh@gmail.com
+	longint	contact		9494934734
+		
+
+			datatypes
+	Primitive       		Non-primitive
+	 one value			many values
+
+	byte	  1 byte	-128 to 127
+	short	  2 bytes	-32768 to 32767
+	int	  4 bytes	-2147483648 to ....647
+	long	  8 bytes	
+
+	float	  4		23.43434554545f	 5-6
+	double	  8		23.12321321354;  14-15
+
+	char	  2/1			'M'  ASCII   A-65,a-97
+	boolean	  1 bit	
+
+						137
+			byte age=31;
+
+methods:
+========
+	code reusability
+
+
+	accessmodifier static/instance void/anything methodname(list of params)
+	{
+	
+	}
+Flow Control:
+============
+
+	
+By default package for all the java files is java.lang
+By default parent for all the java classes is java.lang.Object
+
+
+Variables:
+===========
+
+		local 
+		global-->static,instance
+
+
+		JDK--->JRE-->JVM
+
+
+https://dzone.com/articles/jvm-architecture-explained
+
+
+Instance and Static :
+====================
+
+
+1)Syntax
+	for static properties static keyword is mandatory 
+	if there is no static i.e instance
+
+2)Memory
+		Abstraction,Encapsulation,Inheritance,Polymorphisam
+		
+	class is a collection of data members and member functions
+
+	object is instance of class
+		  memory
+
+	**instance properties will get memory when the object is created 
+	**static properties will get memory only once at the time of class loading into JVM 
+	**local variables will get memory when method is getting executed
+	
+
+3)Access
+	static properties can be accessed by using classname
+	instance properties can be accessed by using objref
+
+
+4)Usage
+	for common data like schoolname,orgname,countryname ... will go with static
+
+	for unique data like eid,email,phone,accno ... will go with instance
+
+
+
+System.out.println();
+
+				
+
+class Test{
+	static String name=new String("welcome");//length  instance
+
+main()
+{
+		Test.name.length()
+
+}
+	
+}
+
+
+class System{
+	static PrintStream out=new....();
+
+
+}	
+	System.out.println();
+
+
+OOPS:
+======
+		performance and security
+	JAVA is OOPL/OOPS(4 features)
+
+	Inheritance
+	polymorphisam	performance
+	abstraction
+	encapsulation	security
+
+
+Inheritance:
+===========	extends and implements
+
+		extending the features from one class to another 
+
+
+	class Test
+		{
+		1000 methods
+
+		}
+
+	class Client extends Test
+		{
+		200 methods
+		}
+
+Multiple Inheritance:
+=====================
+
+
+Abstraction:
+===========
+	
+	abstract method:
+
+	method with out logic/implementation/body
+
+
+	class		:it's a collection only concrete methods
+	abstract class	:it is combination of both concrete and abstract methods
+	interface 	:its a collection only abstract methods
+
+	
+	interface:
+	=========	
+		to achieve abstraction in java 
+
+		to achieve Multiple Inheritance 
+
+
+
+
+		interface parent1 		interface parent2
+			{			{
+			m1();			m1();
+
+			}			}
+			
+		class Child implements parent1,parent2
+			{
+			m1(){
+			}
+
+			main()
+			{
+				Child child=new Child();
+				child.m1();
+				
+			}
+
+			}
+
+	Java Doesn't support multiple inheritance through classes
+	Java  support multiple inheritance through interfaces
+
+Encapsulation:
+=============
+
+	public,private,protected,default,this,super,constructor,final,encapsulation
+
+
+
+public class CommandLineArgs {
+	public static void main(String[] args) {// java CommandLineArgs 34 56 mukesh 23.56
+		int a = Integer.parseInt(args[0]);// "34"
+		int b = Integer.parseInt(args[1]);
+
+		String name = args[2];
+		int result = a + b;
+		float salary = Float.parseFloat(args[3]);
+
+		System.out.println("Add of two numbers " + result + " " + name + " " + salary);
+
+	}
+}
+
+
+
+
+empid	int
+empname	string
+empsal	float
+empadd	string
+empgender char 'm' 'f'
+committed  Boolean true /false
+
+
+exception handling
+collections
+java8 
+
+
+	Encapsulation:
+	=============
+	its process of wrapping/binding data and corresponding methods together
+
+
+
+String,StringBuffer,StringBuilder
+
+
+
+Exception Handling:
+===================
+	1)system defined error messages
+	2)abnormal termination
+
+
+
+	1)user friendly error messages
+	2)normal termination
+
+
+		try{error code/risky code},catch{handling code},finally{cleanup code},throw,throws
+
+
+	throw 
+
+	throws
+
+	
+Collections Framework:
+======================
+		
+	variables--->one value
+	arrays--->group of values
+		
+		1)fixed in size 
+		2)homogeneous/similar data 
+		3)no utility methods
+
+
+ Advantages With Collections:
+		1)not fixed in size or growable in nature
+		2)homogeneous data and heterogeneous data
+		3)lots utility methods
+
+						java.util 
+					   Collection(I) add
+			
+			List(I)				Set(I) 				Queue(I)
+	1)duplicates are allowed 	1)duplicates are not allowed
+	2)insertion order is preserved  2)insertion order is not preserved
+		ArrayList
+		LinkedList
+		Vector	legacy(deprecated)
+		Stack		FILO
+		Queue		FIFO	
+
+				t1,t2,t3
+
+
+
+			public void m1(){
+
+			t1,t2,t3
+			}
+
+			t1
+			public void synchronized m2(){
+	
+			}
+
+		interface
+		Functional Interface		SAM
+		marker interface 		zero	
+
+
+		Comparable    NSO  FI   compareTo()
+		Comparator    CSO  FI  compare()
+
+
+Multi Threading:
+================
+
+Java8 features:
+===============
+	Functional Interface
+	lambda Expressions
+	default and static methods
+	:: method/constructor reference
+	Date/Time Api LocalDate,LocalTime,LocalDateTime....
+	Stream Api
+	Predicate,Function,Supllier,Consumer(Predefined FI from 1.8)
+	Optional
+
+
+
+
+		//returns -ve if object1 has to come before object2
+		//returns +ve if object1 has to come after object2
+		//returns 0 if both objects are same 
+Agile
+
+SOLID
+
+
+Spring Framework:
+==================
+	2003	spring 1.x 
+		
+		spring 6.x		
+		
+	ROD Johnson
+	
+	spring is non-invasive framework, which is used to create light weight and loosely coupled application
+	
+
+
+	FRAMEWORKS
+		INVASIVE	:struts,it will force the developer to implement predefined api
+		NON-INVASIVE	:spring,hibernate,it will never force the developer to implement predefined api
+
+	InvalidCredential extends Exception
+
+	Test extends Thread/Runnable(run)
+
+	JEE:Servlets  3 ways 
+
+	
+
+	class Login implements Servlet/GenericServlet/HttpServlet-12 methods
+	{
+
+	}		heavy weight 
+
+	1000*12=12000
+	
+
+		EJB-->Rod Jonson--interface21-->spring framework-->light weight 
+
+
+
+loosely coupled
+tightly coupled
+
+		
+
+
+	Spring non-invasive/lightweight and loosely coupled
+
+
+		Test 
+
+				spring container
+
+
+		client
+
+		//Test test=new Test();
+
+
+
+	spring container -->interface-->BeanFactory,ApplicationContext
+
+		Entire Object Life cycle 
+	
+		1)creation of objects	
+		2)Wiring the objects
+		3)Configuring the objects
+		4)Destroying the objects
+
+	JARS
+	
+	MAVEN-->Build Tool
+	
+
+Spring Modules
+
+	spring core/dependency injection module/IOC
+	spring jdbc
+	spring orm
+	spring MVC
+	spring AOP	
+
+
+spring boot
+
+	
+
+		<bean id="" class="" scope="" autowire="byname/bytype/constructor" primary=true>
+		<property name="" value="" ref>
+		<constructor-arg>
+
+	Annotation Config	
+
+		@Component
+		@Configuration
+		@ComponentScan
+		@Autowired
+		@Scope
+
+	JAVA Config
+
+NOTE:Spring has given annotations for user defined classes like @Component but not for predefined classes
+
+
+		java -->database
+
+
+		Employee ---><bean >
+
+		Employee ---->@Component
+
+		Employee ---->@Bean
+
+
+		@Configuration
+		
+
+		@Bean
+		public Employee getEmployee()
+		{
+			return new Employee();
+
+		}
+
+
+		SQL
+
+	DDl,DML,DRL
+
+	DDL:create,alter,drop,truncate,rename
+	DML:Insert,update,Delete
+	DRL:Select
+
+	constraints
+	============
+		unique,notnull,check,Fk,PK
+
+
+notnull
+		
+JDBC:
+=====  JAVA Database Connectivity
+	
+API-->sun micro system
+
+			JDBC Api		
+		JAVA   ---------->  Database  
+
+5 steps
+
+	
+1.load the driver class
+
+2.create the connection
+
+3.create the statement
+
+4.execute the query
+
+5.close the connection
+
+	MySQL.jar
+
+Spring core:
+============
+	@Component	dependency injection/IOC
+	@Configuration 	
+	@ComponentScan
+	@Autowired
+	@Bean
+	@Value
+	@PropertySource	
+	@Qualifier
+	@Scope
+	
+
+	
+
+JDBC
+	-->WO Exception handling	
+	-->Boilerplate code
+	-->Tightly coupled
+
+Spring JDBC-->JDBC
+	Loosely coupled
+	no exception handling
+	no boilerplate 
+
+
+	JdbcTemplate--->execute,update,query
+
+
+	DriverManagerDataSource-->Datasource
+
+
+
+	maven-->spring core /context
+		mysql-connector
+		spring-jdbc
+
+	layered Architecture:
+	=====================
+
+				backend jdbc
+gmail login
+	username	xyz
+	password	xyz	--->
+
+Test.java
+	Scanner -->
+
+	username
+	password
+		 5 steps
+		
+					gmail
+	response				username password
+					 xyz	  xyz
+
+	3 layered
+
+ presentation/controller/ui layer
+	12
+	13
+	
+
+service layer /business logic layer
+	12-13
+
+DAO/Repository layer
+
+	database logic
+
+	database
+
+JDBC
+Spring JDBC-->JdbcTemplate
+
+	MYSQl-->Oracle
+
+
+
+JPA-->JDBC--
+
+	no table creation
+	no query's(no database dependent query)
+	cache support
+	light weight 
+
+	select * from employee; 1 lac
+
+
+	JPA-->specification
+
+	ORM tools--->implementation hibernate,eclipselink,toplink,ibatis.....
+
+		Object Relational Mapping
+
+
+
+		update(query,employee)
+
+						object-->row
+						classname--->tablename
+						variable--->column name
+		@Entity
+		@Table(name="sleeping_emps")
+
+		class Employee{
+		@Column(name="eid")
+		@Id
+		@GeneratedValue		1,+1	1000+10	//sequence
+		private int empId;
+		private String empName;
+		private int empSal;
+		private Stirng empAddress;
+		@OnetoOne/@onetomany/@manytoone/@manytomany
+		private Department deptno;
+
+			}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+Single Responsibility Principle (SRP):
+A class should have only one reason to change, meaning it should have a single, well-defined responsibility.
+
+Open/Closed Principle (OCP):
+Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+
+Liskov Substitution Principle (LSP):
+Subtypes should be substitutable for their base types without altering the correctness of the program.
+
+Interface Segregation Principle (ISP):
+Clients should not be forced to depend on methods they do not use.
+
+Dependency Inversion Principle (DIP):
+High-level modules should not depend on low-level modules; both should depend on abstractions.
+
+
+
+
+Product Management App
+	
+	Task:
+		9.get the products greater than for the given price
+		input :9000
+		pid  pname price  category  quantity
+		123 	x   9200  abc		20 
+		124 	y   9300  lmn		10
+		
+			
+
+ProductManagementAppUsingJPA
+
+ProductManagementAppUsingSpingJPA
+
+
+
+	spring and orm
+
+
+	pom.xml
+	
+
+	java config 
+
+	tomcat server 
+
+
+Spring Boot:
+===========
+
+	production ready application	
+
+
+	1)AutoConfiguration :Most of the commonly used classes already configured by the spring boot			DMDS,Hikari,c3po,tomcat......
+	2)starters   		spring-boot-starter-parent
+	3)embedded server
+	4)Actuators   url
+	5)inbuilt DB h2
+
+
+	3.x
+
+This is a convenience annotation that is equivalent to declaring @SpringBootConfiguration, @EnableAutoConfiguration and @ComponentScan.
+
+
+Java8 features:
+
+	1.lambda expressions
+	2.functional interfaces
+	3.Default and static methods
+	4.:: method reference/constructor reference
+	4.predefined functional interfaces(predicate/supplier/consumer/function)
+	5.stream api
+	7.Date and time api
+	8.Optional class
+	
+
+	
+Case Study
+	
+	Backend    individual project
+
+	microservices architecture
+	layered architecture
+	MySQL 
+	jpa+hibernate
+	
+	best practices(sonar)
+	junit/Mockito test cases
+	Lombok
+	git
+	proper exception handling
+	validations
+	api gate way
+	config server
+	eureka server
+	hystrix
+	open feign/rest template/webclient
+
+	
+
+
+
+
+
+	Junit/Mockito
+
+	TDD testing
+
+
+		Junit
+
+
+		class Calculator
+		{
+			public int add(int a,int b)
+			{
+			return a+b;
+			}
+		}
+						Assertions
+
+		class CalculatorTest{
+	
+			Calculator calci=new Calculator();
+			@Test
+			public void testAdd()
+			{
+			assertEquals(3,calci.add(3,2));
+			}
+		
+			}
+
+Junit5 -->
+
+		Junit Jupiter
+
+		Junit Vintage
+
+		Junit Platform
+		
+	
+
+
